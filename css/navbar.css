@@ -1,0 +1,131 @@
+:root{
+    --buff: #e59f71ff;
+    --sinopia: #ba5a31ff;
+    --night: #0c0c0cff;
+    --emerald: #69dc9eff;
+    --white: #ffffffff;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/*nv */
+.custom-navbar {
+  background-color: var(--buff);
+}
+
+/*HAK */
+.brand-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* SPORT */
+.brand-name .highlight {
+  color: var(--white);
+}
+
+/*menú color inicial sin click */
+.nav-link {
+  position: relative;
+  color: black;
+  font-weight: 500; /*grososr*/
+  text-decoration: none; /*evita el subrayado de defect*/
+  transition: color 0.3s ease;
+}
+
+/*ssubrayado verde*/
+.nav-link::after {
+  content: ""; /*capa invisible se nuestra linea incial*/
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--emerald);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/*cambia el texto a blanco*/
+.nav-link:active,
+.nav-link:focus {
+  color: var(--white);
+}
+
+/* BANNER*/
+.baner {
+  background-image: url("/img/banner2.png"); /* Reemplaza con tu imagen real */
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 1.5s ease; /* transici\u00f3n suave */
+  transform: scale(1); 
+}
+
+
+.capa-superpuesta {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-baner {
+  color: var(--white);
+}
+
+.titulo-baner {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.boton-baner {
+  font-size: 18px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+
+.custom-footer {
+  background-color: var(--buff);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--black);
+}
+
+.footer-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+/* SPORT */
+.footer-highlight {
+  color: var(--white);
+}
+
+/* título */
+.footer-title {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.footer a {
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s ease;
+}

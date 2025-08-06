@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Hack Sport</title>
+</head>
+
+<body>
+    <!-- ************************************** -->
+    <!-- SECCION NAVBAR -->
+    <!-- ************************************** -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand brand-name" href="#">
+                HAK<span class="highlight">SPORT</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contáctanos</a>
+                    </li>
+                </ul>
+                <button id="mostrar-carrito" type="button" class="btn btn-danger"> <i
+                        class="bi bi-cart-plus-fill icono-carrito"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="carrito-compras" class="d-none">
+        <div class="d-flex justify-content-end">
+            <button type="button" id="btn-close" class="btn-close" aria-label="Close"></button>
+        </div>
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="productos-carrito">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ************************************** -->
+    <!-- SECCION BANNER -->
+    <!-- ************************************** -->
+    <section class="baner">
+        <div class="capa-superpuesta">
+            <div class="contenedor text-center contenido-baner">
+                <h1 class="titulo-baner">Somos mejores que ayer</h1>
+                <a href="#productos" class="btn btn-light boton-baner">Promoción</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************** -->
+    <!-- SECCION PLANES -->
+    <!-- ************************************** -->
+    <section id="planes">
+        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2" class="btn-barra"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3" class="btn-barra"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 3" class="btn-barra"></button>
+            </div>
+
+            <h5 class="text-center fs-3 mb-5 mt-3">Nuestros Planes</h5>
+
+            <!-- Plan Basico -->
+            <div class="carousel-inner">
+                <div class="carousel-item active mb-3">
+                    <div class="container d-flex justify-content-center">
+                        <div class="card mb-3 mt-5" style="max-width: 600px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/img/PlanBasico.jpg" class="img-fluid rounded-start" alt="PlanBasico" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Plan Básico</h5>
+                                        <ul class="card-text m-3">
+                                            <li>Solo en la sede que te inscribes</li>
+                                            <li>Una rutina al iniciar</li>
+                                            <li>Rutina personalizada</li>
+                                            <li>Acceso a todas las maquinas</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-around align-items-center pg-3 mt-5">
+                                            <p class="card-text m-0"><strong>Precio: $70.000 Cop</strong></p>
+                                            <button class="btn btn-primary m-3 btnInscribir"
+                                                id="btnInscribir">¡Inscribirse!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Plan Premium -->
+                <div class="carousel-item mb-3">
+                    <div class="container d-flex justify-content-center">
+                        <div class="card mb-3  mt-5" style="max-width: 600px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/img/PlanPremium.jpg" class="img-fluid rounded-start" alt="PlanPremium" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Plan Premium</h5>
+                                        <ul class="card-text m-3">
+                                            <li>Examen inbody para definir objetivos</li>
+                                            <li>Instructor personal</li>
+                                            <li>Ingreso a cualquier sede</li>
+                                            <li>Libreta personalizada de alimentación</li>
+                                            <li>Rutina personalizada</li>
+                                        </ul>
+                                        <div class="d-flex justify-content-around align-items-center pg-3">
+                                            <p class="card-text m-0"><strong>Precio: $100.000 Cop</strong></p>
+                                            <button class="btn btn-primary m-3 btnInscribir">¡Inscribirse!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Anual -->
+                <div class="carousel-item mb-3">
+                    <div class="container d-flex justify-content-center">
+                        <div class="card mb-3  mt-5" style="max-width: 600px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/img/PlanAnual.jpg" class="img-fluid rounded-start" alt="PlanAnual" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Plan Anual</h5>
+                                        <ul class="card-text m-3">
+                                            <li>Examen inbody para definir objetivos</li>
+                                            <li>Instructor personal</li>
+                                            <li>Ingreso a cualquier sede</li>
+                                            <li>Libreta personalizada de alimentación</li>
+                                            <li>Rutina personalizada</li>
+                                            <li><strong>Descuento de 30% al adquirir este plan</strong></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-around align-items-center ">
+                                            <p class="card-text m-0"><strong>Precio: $840.000 Cop</strong></p>
+                                            <button class="btn btn-primary m-3 btnInscribir">¡Inscribirse!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Spinning -->
+                <div class="carousel-item mb-3">
+                    <div class="container d-flex justify-content-center">
+                        <div class="card mb-3  mt-5" style="max-width: 600px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/img/PlanSpinning.jpg" class="img-fluid rounded-start"
+                                        alt="PlanSpinning" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Plan Spinning</h5>
+                                        <ul class="card-text m-3">
+                                            <li>Examen inbody para definir objetivos</li>
+                                            <li>Instructor personal</li>
+                                            <li>Clases grupales (día y noche)</li>
+                                            <li>Rutina personalizada</li>
+                                            <li><strong>Incluye 2 clases de zumba</strong></li>
+                                        </ul>
+                                        <div class="d-flex justify-content-around align-items-center pg-3">
+                                            <p class="card-text m-0"><strong>Precio: $95.000 Cop</strong></p>
+                                            <button class="btn btn-primary m-3 btnInscribir">¡Inscribirse!</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- ************************************** -->
+    <!-- SECCION BANNER CTA -->
+    <!-- ************************************** -->
+    <section id="banner-cta">
+        <div class="container-fluid m-auto ">
+            <div class="row">
+                <div class="col-12 mt-4 Banner-cta p-3">
+                    <marquee behavior="scroll" direction="left">
+                        <h3 class="Parrafo_banner"> Potenciamos tu pasión deportiva con tecnología e innovación junto a
+                            <strong> <em>Hack Sport</em> </strong> </h3>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ************************************** -->
+    <!-- SECCION PRODUCTOS -->
+    <!-- ************************************** -->
+    <section id="productos" class="p-5">
+        <p class=" text-center mb-5 fs-1 fw-bold">NUESTROS PRODUCTOS</p>
+
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/1.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" name="proteina-vegetal">Proteína vegetal</h5>
+                        <p class="card-text">Elaborado a partir de fuentes vegetales como guisantes, arroz, soya, cáñamo
+                            o quinoa. Es una excelente alternativa a las proteínas de origen animal, ideal para personas
+                            veganas, vegetarianas o con intolerancia a la lactosa.</p>
+                        <p>$100.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="1">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/2.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pre-workout</h5>
+                        <p class="card-text">suplemento diseñado para aumentar la energía, la concentración y el
+                            rendimiento físico antes de realizar ejercicio. Suele contener ingredientes como cafeína,
+                            beta-alanina, creatina y aminoácidos que ayudan a mejorar la resistencia y retrasar la
+                            fatiga.</p>
+                        <p>$72.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="2">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/3.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BCCA</h5>
+                        <p class="card-text">suplemento compuesto por tres aminoácidos esenciales: leucina, isoleucina y
+                            valina, fundamentales para la síntesis de proteínas y la recuperación muscular. El cuerpo no
+                            los produce por sí mismo, por lo que deben obtenerse a través de la dieta o suplementos.</p>
+                        <p>$94.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="3">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/4.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Whey protein</h5>
+                        <p class="card-text">proteína de alta calidad obtenida del suero de la leche, reconocida por su
+                            rápida absorción y alto valor biológico. Es uno de los suplementos más populares para ganar
+                            masa muscular, mejorar la recuperación y complementar la dieta.</p>
+                        <p>$130.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="4">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/5.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Creatinia</h5>
+                        <p class="card-text">uno de los suplementos más estudiados y efectivos para mejorar el
+                            rendimiento físico y aumentar la fuerza muscular. Se encuentra de forma natural en el cuerpo
+                            y en alimentos como la carne, pero en forma de suplemento permite alcanzar niveles óptimos
+                            para potenciar el entrenamiento.</p>
+                        <p>$82.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="5">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/6.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fat burner</h5>
+                        <p class="card-text">Suplemento termogénico que ayuda a acelerar el metabolismo y a quemar grasa
+                            más rápido durante el entrenamiento.</p>
+                        <p>$73.400</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="6">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/7.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Amino</h5>
+                        <p class="card-text">Fórmula de aminoácidos esenciales que apoya la recuperación muscular, el
+                            rendimiento y la resistencia.</p>
+                        <p>$68.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="7">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/8.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mass gainer</h5>
+                        <p class="card-text">Ganador de masa con alto contenido calórico y proteico, ideal para aumentar
+                            volumen y peso de forma efectiva.</p>
+                        <p>$89.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="8">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/9.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Eflotefone</h5>
+                        <p class="card-text">Suplemento avanzado diseñado para apoyar el equilibrio hormonal y potenciar
+                            el rendimiento físico masculino.</p>
+                        <p>$143.000</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="9">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="../img/productos/10.webp" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Creatinina monohidrato</h5>
+                        <p class="card-text">Mejora la fuerza, potencia y resistencia muscular, favoreciendo el
+                            rendimiento en entrenamientos intensos.</p>
+                        <p>$76.700</p>
+                    </div>
+                    <button type="button" class="agregar btn" product-id="10">Agregar <i
+                            class="bi bi-cart-plus-fill"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ************************************** -->
+    <!-- SECCION CONTACTANOS -->
+    <!-- ************************************** -->
+    <section id="contactanos">
+        <div class="container py-5">
+        <h5 class="text-center fs-3 mb-5 mt-3">Contáctanos</h5>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="/img/img-contacto.png" alt="Contáctanos" class="img-fluid" style="max-width: 80%;">
+            </div>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="emailInput" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="pepito@example.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nameInput" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Pepito Pérez">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="addressInput" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="addressInput" placeholder="Cra 9 # 9-9">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="messageInput" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="messageInput" rows="3"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- ************************************** -->
+    <!-- SECCION FOOTERS -->
+    <!-- ************************************** -->
+
+    <footer class="footer mt-5 py-4 custom-footer">
+        <div class="container">
+            <div class="row">
+
+                <!--columna1 -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-brand">Hack<span class="footer-highlight">Sport</span></h4>
+                    <div class="redes-sociales mt-2">
+                        <a href="https://www.facebook.com/" class="red-social"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="red-social"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/es/" class="red-social"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!--columna2-->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="footer-title">GENERAL</h5>
+                    <ul class="info">
+                        <li><a href="#">Sedes</a></li>
+                        <li><a href="#">Contáctos</a></li>
+                        <li><a href="#">Clases</a></li>
+                    </ul>
+                </div>
+
+                <!--columna3-->
+                <div class="col-md-4">
+                    <h5 class="footer-title">Conócenos</h5>
+                    <ul class="info">
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--linea debajo  -->
+            <hr class="footer-line my-4">
+
+            <p class="footer-copy text-center">TODOS LOS DERECHOS RESERVADOS 2025 / HakSport CORP.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
